@@ -10,7 +10,7 @@ class Solution {
         if (dp[i][m] != -1) {
             return dp[i][m];
         }
-        int best = 0;
+        int best = 1;
         for (int x = 1; x <= 2 * m && i + x <= n; x++) {
             int nextM = Math.max(m, x);
             int current = suffix[i] - solve(i + x, nextM);
