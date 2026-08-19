@@ -39,7 +39,7 @@ class Solution {
             boolean rightFree = (mask & rightMask) == 0;
 
             if (leftFree && rightFree) {
-                total -= 2;
+                total += 2;
             } else if (leftFree || middleFree || rightFree) {
                 total += 1;
             }
