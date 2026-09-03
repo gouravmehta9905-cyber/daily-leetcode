@@ -5,7 +5,7 @@ class Solution {
 
         int[] positive = new int[n / 2];
         int[] negative = new int[n / 2];
-        
+
         int p = 0;
         int neg = 0;
         for (int i = 0; i < n; i++) {
@@ -18,13 +18,9 @@ class Solution {
                 neg++;
             }
         }
-        int index = 0;
         for (int i = 0; i < n / 2; i++) {
-            nums[index] = positive[i];
-            index++;
-
-            nums[index] = negative[i];
-            index++;
+            nums[2*i] = positive[i];
+            nums[2*i+1] = negative[i];
         }
 
         return nums;
