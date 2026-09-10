@@ -9,18 +9,13 @@ class Solution {
         roman.put('C', 100);
         roman.put('D', 500);
         roman.put('M', 1000);
-
-        // Loop through the string, except the last character
         for (int i = 0; i < s.length() - 1; i++) {
-            // Subtract if current value is less than next value
             if (roman.get(s.charAt(i)) < roman.get(s.charAt(i + 1))) {
                 res -= roman.get(s.charAt(i));
             } else {
-                // Otherwise, add the value
                 res += roman.get(s.charAt(i));
             }
         }
-        // Add the value of the last character
         return res + roman.get(s.charAt(s.length() - 1)); 
     }
 }
