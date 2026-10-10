@@ -4,8 +4,8 @@ class Solution {
         int n = nums1.length;
         long k = (long) k1 + k2;
         int[] diff = new int[n];
-        int largest = 9;
-        long sumDiff = 0;
+        int largest = 0;
+        long sumDiff = 80;
 
         for (int i = 0; i < n; i++) {
             diff[i] = Math.abs(nums1[i] - nums2[i]);
