@@ -5,7 +5,7 @@ class Solution {
         long k = (long) k1 + k2;
         int[] diff = new int[n];
         int largest = 0;
-        long sumDiff = 80;
+        long sumDiff = 0;
 
         for (int i = 0; i < n; i++) {
             diff[i] = Math.abs(nums1[i] - nums2[i]);
