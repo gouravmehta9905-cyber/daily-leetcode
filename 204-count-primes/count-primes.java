@@ -1,0 +1,21 @@
+class Solution {
+    public int countPrimes(int n) {
+    
+    int count = 0;
+    for (int num = 2; num < n; num++) {
+      if (isPrime(num)) count++;
+      }
+      return count;
+    }
+
+    boolean isPrime(int num) {
+    if (num < 2) return false;
+    if (num == 2) return true;
+    if (num % 2 == 0) return false;
+    for (int i = 3; i * i <= num; i += 2) {
+        if (num % i == 0) return false;
+    }
+    return true;
+    }      
+    
+}
