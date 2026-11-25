@@ -1,17 +1,17 @@
 class Solution {
     public boolean isPalindrome(String s) {
-        String str = "";
-        for (char c : s.toCharArray()) {
-            if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9' )) {
-                str += c;
+        String dup = "";
+        for(char ch : s.toCharArray()){
+            if(String.valueOf(ch).matches("[a-zA-Z0-9]")){
+                dup += ch;
             }
         }
-        String lower = str.toLowerCase();
-        int n =lower.length();
-        for(int j = 0; j < n; j++){
-            if(lower.charAt(j) != lower.charAt(n-j-1)) return false;
+        dup = dup.toLowerCase();
+        String dup1 = "";
+        for(int i = dup.length()-1; i >= 0;i--){
+            dup1 += dup.charAt(i);
         }
-        return true ;
-
+        if (dup.equals(dup1)) return true;   
+        else return false;
     }
 }
